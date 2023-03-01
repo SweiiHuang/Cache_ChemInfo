@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang='en'>
+  {% load static %}
+<head>
+  <meta charset='UTF-8' />
+  <title>Cache
+    ChemInfo</title>
+  {% comment %} <link rel='stylesheet' href="{% static 'home.css' %}"/> {% endcomment %}
+  <link rel='stylesheet' href="./static/home.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+
+<body>
+  <div class='menu-container'>
+    <div class='menu'>
+      <a class='menu-title'>Cache ChemInfo</a>
+      <div class='signup'></div>
+      <div class='download-pdf'>Download</div>
+    </div>
+  </div>
+
+  <div class='header-container'>
+    <div class='header'>
+      <div class='header-main'>
+        <label class='header-main-title'>
+          Cache ChemInfo.
+        </label>
+        <div class='header-main-item'>
+          <p>tw_t o x i c</p>
+          <p>tw_c o n c e r n e d</p>
+          <p>tw_p r i o r i t y</p>
+          <p>tw_c o n t r o l l e d</p>
+          <p>eu_c u s t o m s_i n v e n t o r y</p>
+          <p>us_c h e m i c a l_a b s t r a c t s_s e r v i c e</p>
+        </div>
+      </div>
+      <!-- <div class='logo'>
+        <img src='./images/awesome-logo.svg' />
+      </div>
+      <div class='social'>
+        <img src='./images/social-icons.svg' />
+      </div> -->
+    </div>
+    <div class='header-main-search'>
+      <input class='header-main-search-input' type="text" placeholder=" &nbsp Enter CAS Number">
+      <div class='header-main-search-btn'>
+        <img  class='header-main-search-img' src={% static 'images/searchicon.png' %} alt="">
+      </div>
+    </div>
+    <div class='header-main-search-eg'> e.g <p class='search-eg1'>&nbsp100-97-0 </p> </div>
+  </div>
+
+  <div class='photo-grid-container'>
+    <div class='photo-grid'>
+      <div class='photo-grid-item'>
+        <div class='photo-grid-close'>
+          <div class='photo-grid-close-btn'>X</div>
+        </div>
+        <div class='photo-grid-property'>
+          <div class='photo-grid-property-pic'>
+            <p  class='photo-grid-property-h3'>CAS Registry Number</p>
+            <div class='property-pic-cas'></div>
+            <div class='property-pic-svg'>
+            </div>        
+            <p class='property-pic-title'>CAS Name</p>
+            <div class='property-pic-name'></div>
+            
+  
+          </div>
+          <div class='photo-grid-property-text'>
+            <p class='photo-grid-property-h3'>Compound Properties</p>
+            <p class='property-text-title'>Molecular Formula</p>
+            <div class='property-text-formula'>
+              C<sub>6</sub>H<sub>12</sub>N<sub>4</sub>
+            </div>
+            <p class='property-text-title'>Molecular Mass</p>
+            <div class='property-text-mass'></div>
+            <p class='property-text-title'>Boiling Point</p>
+            <div class='property-text-boil'></div>
+            <p class='property-text-title'>Melting Point</p>
+            <div class='property-text-melt'></div>
+            <p class='property-text-title'>Density</p>
+            <div class='property-text-density'></div>
+          </div>
+
+        </div>
+
+        <table class='customs-inv'>
+          <caption class='customs-inv-caption'>Customs Inventory of Chemical Substances</caption>
+          <thead>
+            <tr>
+              <th scope="col">Inventory Name</th>
+              <th scope="col">Cas Number</th>
+              <th scope="col">HS Code</th>
+              <th scope="col">EC Number</th>
+              <th scope="col">Un Number</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td colspan="5">All information is for reference only.</td>
+              <!-- Data is updated every 15 minutes. -->
+            </tr>
+          </tfoot>
+          <tbody class="tbody-box">
+            <!-- <tr class="tr-row">
+              <th class="th-name" scope="row"></th>
+              <td class="th-casNo"></td>
+              <td class="th-cnCode"></td>
+              <td class="th-ecNo"></td>
+              <td class="th-unNo"></td>
+            </tr> -->
+          </tbody>
+        </table>
+
+        <table class='global-inv'>
+          <caption class='global-inv-caption'>Global Inventory of Chemical Substances</caption>
+          <thead>
+            <tr>
+              <th scope="col">Region</th>
+              <th scope="col">Inventory Name</th>
+              <th scope="col">Listed</th>
+              <th scope="col">Cas Number</th>
+              <th scope="col">English Name</th>
+              <th scope="col">Chinese Name</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td colspan="6">All information is for reference only.</td>
+              <!-- Data is updated every 15 minutes. -->
+            </tr>
+          </tfoot>
+          <tbody class="tbody-box-global">
+            {% comment %} <tr class="tr-row">
+             <th class="th-invRegion" scope="row"></th>
+              <td class="th-invName"></td>
+              <td class="th-invListed"></td>
+              <td class="th-invCas"></td>
+              <td class="th-invEnName"></td>
+              <td class="th-invCnName"></td>
+            </tr> {% endcomment %}
+          </tbody>
+        </table>
+   
+      </div>    
+      </div>
+    </div>
+  
+  </div>
+
+  <div class='footer'>
+    <div class='footer-item footer-one'></div>
+    <div class='footer-item footer-two'>All information is for reference only.</div>
+    <div class='footer-item footer-three'></div>
+  </div>
+
+  {% comment %} <script>
+    const downloadBtn = document.querySelector('.download-pdf');
+    const content = document.querySelector('.photo-grid-item');
+  
+    downloadBtn.addEventListener('click', () => {
+      const options = {
+        margin: [1, 0, 1, 0], // 設定 margin 為 0，讓下載的內容填滿整個頁面
+        filename: 'downloaded.pdf',
+        image: { type: 'png', quality: 1 }, // 設定圖片格式和品質
+        pagebreak: ['css', 'avoid'],
+        html2canvas: { scale: 3 }, // 設定 html2canvas 的比例，以提高圖片品質
+        jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' } // 設定下載的文件格式為 A4 縱向
+      };
+    
+      // 執行 html2pdf 函式，將 content 內容下載為 PDF
+      html2pdf().set(options).from(content).save();
+    });
+  </script> {% endcomment %}
+
+
+  {% comment %} <script>
+    const download = document.querySelector('.download-pdf');
+  download.addEventListener('click', () => {
+    const content = document.querySelector('.photo-grid-item');
+
+    const promise = new Promise((resolve, reject) => {
+      html2canvas(content, {
+        onrendered: function(canvas) {
+          resolve(canvas);
+        },
+        width: content.clientWidth,
+        height: content.clientHeight,
+        scrollY: window.scrollY
+      });
+    });
+    
+
+    promise.then(function(canvas) {
+      // 建立 PDF 物件
+      const pdf = new jsPDF();
+
+      // 將 canvas 轉換為 PDF
+      pdf.addImage(canvas.toDataURL('image/jpeg'), 'JPEG', 0, 0);
+
+      // 下載 PDF 文件
+      pdf.save('downloaded.pdf');
+    });
+  });
+  </script> {% endcomment %}
+
+  
+
+  <script type="application/javascript" src="./static/home.js"></script>
+
+  {% comment %} <script src="{% static 'home.js' %}"></script> {% endcomment %}
+
+
+</body>
+
+</html>
