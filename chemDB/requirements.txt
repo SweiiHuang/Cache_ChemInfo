@@ -1,0 +1,12 @@
+pymysql
+pandas
+sqlalchemy
+selenium
+requests
+beautifulsoup4
+lxml
+html5lib
+zeep
+python-dotenv
+tabula
+odfpy
