@@ -1,0 +1,9 @@
+django
+pymysql
+djangorestframework
+django-filter
+django-cors-headers
+pillow
+python-dotenv
+django-storages
+boto3
