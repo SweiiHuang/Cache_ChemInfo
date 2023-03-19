@@ -38,6 +38,8 @@ Website : https://lagom247.com/
     - MySQL(RDS)
     - Database normalization
     - Database schema
+    <img width="561" alt="Screen Shot 2023-03-19 at 11 59 45 PM" src="https://user-images.githubusercontent.com/102010184/226188335-720a09d5-2db7-4d23-8ef4-10e3ec64e73c.png">
+
 - Networking
     - HTTP & HTTPS
     - Domain Name System
@@ -49,6 +51,8 @@ Website : https://lagom247.com/
     - Git / GitHub
  - Architecture
     - Server Architecture
+    <img width="686" alt="Screen Shot 2023-03-19 at 11 59 35 PM" src="https://user-images.githubusercontent.com/102010184/226188330-69cf5c7f-aac9-4a4d-9206-0cb799252a6d.png">
+
 
 
 
