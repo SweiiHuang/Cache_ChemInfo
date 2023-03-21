@@ -14,8 +14,10 @@ Website : https://lagom247.com/
 ## Main Features
 
 * Independent web scraper program
+
 * Established a Data Pipeline for managing data
 <img width="1137" alt="Screen Shot 2023-03-21 at 11 33 46 PM" src="https://user-images.githubusercontent.com/102010184/226657879-af1e9be8-6176-4f8d-81a8-1032eb8fbd23.png">
+
 * Integrated information Integrated Information on One Page
 ![chem info](https://user-images.githubusercontent.com/102010184/226188094-80c140a9-34ea-4f7b-8c6c-c98c2d3968c1.gif)
 
