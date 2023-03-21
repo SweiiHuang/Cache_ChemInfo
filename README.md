@@ -16,10 +16,10 @@ Website : https://lagom247.com/
 * Independent web scraper program
 
 * Established a Data Pipeline for managing data
-* <img width="1137" alt="Screen Shot 2023-03-21 at 11 33 46 PM" src="https://user-images.githubusercontent.com/102010184/226657879-af1e9be8-6176-4f8d-81a8-1032eb8fbd23.png">
+  <img width="1137" alt="Screen Shot 2023-03-21 at 11 33 46 PM" src="https://user-images.githubusercontent.com/102010184/226657879-af1e9be8-6176-4f8d-81a8-1032eb8fbd23.png">
 
 * Integrated information Integrated Information on One Page
-* ![chem info](https://user-images.githubusercontent.com/102010184/226188094-80c140a9-34ea-4f7b-8c6c-c98c2d3968c1.gif)
+  ![chem info](https://user-images.githubusercontent.com/102010184/226188094-80c140a9-34ea-4f7b-8c6c-c98c2d3968c1.gif)
 
 
 
@@ -41,7 +41,7 @@ Website : https://lagom247.com/
     - MySQL(RDS)
     - Database normalization
     - Database schema
-    <img width="561" alt="Screen Shot 2023-03-19 at 11 59 45 PM" src="https://user-images.githubusercontent.com/102010184/226188335-720a09d5-2db7-4d23-8ef4-10e3ec64e73c.png">
+      <img width="561" alt="Screen Shot 2023-03-19 at 11 59 45 PM" src="https://user-images.githubusercontent.com/102010184/226188335-720a09d5-2db7-4d23-8ef4-10e3ec64e73c.png">
 
 - Networking
     - HTTP & HTTPS
@@ -54,7 +54,7 @@ Website : https://lagom247.com/
     - Git / GitHub
  - Architecture
     - Server Architecture
-    <img width="686" alt="Screen Shot 2023-03-19 at 11 59 35 PM" src="https://user-images.githubusercontent.com/102010184/226188330-69cf5c7f-aac9-4a4d-9206-0cb799252a6d.png">
+      <img width="686" alt="Screen Shot 2023-03-19 at 11 59 35 PM" src="https://user-images.githubusercontent.com/102010184/226188330-69cf5c7f-aac9-4a4d-9206-0cb799252a6d.png">
 
 
 
