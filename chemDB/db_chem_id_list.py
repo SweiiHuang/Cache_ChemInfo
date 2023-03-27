@@ -27,7 +27,7 @@ results = cursor.fetchall()
 list_numbers = [result[0] for result in results]
 
 
-# Close the connection
+
 cursor.close()
 conn.close()
 
