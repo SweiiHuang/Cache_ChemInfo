@@ -10,20 +10,16 @@ const content = document.querySelector('.photo-grid-item');
 downloadBtn.addEventListener('click', () => {
 
     const options = {
-        margin: [1, 0, 1, 0], // 設定 margin 為 0，下載的內容填滿頁面
-        filename: 'downloaded.pdf', //下載檔名
-        image: { type: 'png', quality: 1 }, // 設定圖片格式和品質
-        pagebreak: ['css', 'avoid'], //避免分頁
-        html2canvas: { scale: 3 }, // 設定 html2canvas 比例
-        jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' } // 下載的文件格式
+        margin: [1, 0, 1, 0],
+        filename: 'downloaded.pdf',
+        image: { type: 'png', quality: 1 },
+        pagebreak: ['css', 'avoid'],
+        html2canvas: { scale: 3 },
+        jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' }
     };
 
 
-    // 執行 html2pdf 函式，將 content 內容下載為 PDF
     html2pdf().set(options).from(content).save();
-
-    // 下載完畢後，將 content 的高度改回 300px
-
 
 });
 
@@ -38,18 +34,6 @@ function handleInputEvent(event) {
     if (event.type === "click" || (event.type === "keydown" && event.key === "Enter")) {
         // clear tbody-box previous result
         refreshInfo();
-        // let tbodyBox = document.querySelector(".tbody-box");
-        // while (tbodyBox.firstChild) {
-        //     tbodyBox.removeChild(tbodyBox.firstChild);
-        // }
-
-        // let tbodyBoxGlobal = document.querySelector(".tbody-box-global");
-        // while (tbodyBoxGlobal.firstChild) {
-        //     tbodyBoxGlobal.removeChild(tbodyBoxGlobal.firstChild);
-        // }
-
-        // const showData = document.querySelector(".photo-grid-item")
-        // showData.style.display = "block"
 
         const keyword = document.querySelector(".header-main-search-input").value;
 
@@ -88,28 +72,6 @@ function refreshInfo() {
         document.querySelector(".download-pdf")
     showDownload.style.display = "block"
 }
-// getResult.addEventListener("click", () => {
-//     // clear tbody-box previous result
-//     let tbodyBox = document.querySelector(".tbody-box");
-//     while (tbodyBox.firstChild) {
-//         tbodyBox.removeChild(tbodyBox.firstChild);
-//     }
-
-//     let tbodyBoxGlobal = document.querySelector(".tbody-box-global");
-//     while (tbodyBoxGlobal.firstChild) {
-//         tbodyBoxGlobal.removeChild(tbodyBoxGlobal.firstChild);
-//     }
-
-//     const showData = document.querySelector(".photo-grid-item")
-//     showData.style.display = "block"
-
-//     const keyword = document.querySelector(".header-main-search-input").value;
-
-//     getPropertyInfo(keyword);
-//     getCustomsInfo(keyword);
-//     getInventoryInfo(keyword);
-
-// });
 
 
 function getPropertyInfo(keyword) {
@@ -178,7 +140,6 @@ function getInventoryInfo(keyword) {
                 { region: "Taiwan", name: "Priority Management Chemicals", data: data.priority_data },
                 { region: "Taiwan", name: "Toxic Chemical Substances", data: data.toxic_data },
             ];
-            // console.log(results);
 
             for (const result of results) {
                 const row0 = document.createElement("tr");

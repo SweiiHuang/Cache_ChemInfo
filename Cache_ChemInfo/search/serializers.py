@@ -20,7 +20,7 @@ class TwConcernedChemSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = TwConcernedChem
-        fields = '__all__' #所有欄位
+        fields = '__all__' 
 
 class  TwControlledChemSerializer(serializers.HyperlinkedModelSerializer):
 
