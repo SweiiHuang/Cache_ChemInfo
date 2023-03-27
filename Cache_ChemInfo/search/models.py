@@ -14,9 +14,9 @@ class ChemPropertyList(models.Model):
 
     class Meta:
         managed = False  
-        # Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+        
         db_table = 'chem_property_list' 
-        # define models that match the tables in existing database
+        
 
 
 

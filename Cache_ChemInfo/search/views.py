@@ -17,7 +17,7 @@ def home(request):
     return render(request,'home.html')
 
 
-#控制最後輸出API，是一次顯示全部還是10個資料(page_size )
+
 class StandardPagination(PageNumberPagination):
     page_size = 10
     page_size_query_param = "page"
@@ -27,8 +27,8 @@ class ChemIdListViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    queryset = ChemIdList.objects.all().order_by('id')   #ModelViewSet擁有 CRUD 的全部功能
-    http_method_names = ['get']   #限制只能使用get
+    queryset = ChemIdList.objects.all().order_by('id')  
+    http_method_names = ['get'] 
 
     serializer_class = ChemIdListSerializer
     pagination_class = StandardPagination
@@ -118,9 +118,9 @@ class CheckDataViewSet(viewsets.ModelViewSet):
         data = {}
         for model in [TwConcernedChem, TwControlledChem, TwPriorityChem, TwToxicChem]:
             if cas_no:
-                # print(f"Querying model {model.__name__} with cas_no={cas_no}")
+               
                 queryset = model.objects.filter(Q(cas_no=cas_no) | Q(cas_no__isnull=True))
-                # print(f"Resulting queryset for model {model.__name__}: {queryset}")
+               
                 if queryset.exists():
                     serializer = self.serializer_class(context={'request': request})
                     data[model.__name__.lower()] = serializer.data
