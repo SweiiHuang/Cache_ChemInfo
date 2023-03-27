@@ -24,10 +24,10 @@ results = cursor.fetchall()
 
 list_numbers = [result[0] for result in results]
 
-# a list of CAS numbers
+
 cas_numbers = list_numbers
 data_list = []
-# initialize a list to store the CAS numbers that did not return any data
+
 missing_data = []
 
 for cas_number in cas_numbers:
@@ -65,7 +65,7 @@ for cas_number in cas_numbers:
     data_list.append(data_dict)
     time.sleep(1)
 
-# Print CAS numbers that did not return any data
+
 if missing_data:
     print(f"CAS numbers that did not return any data: {missing_data}")
 
