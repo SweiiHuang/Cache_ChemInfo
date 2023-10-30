@@ -7,7 +7,7 @@
 
 
 ## Demo
-Website : https://lagom247.com/
+Website : ~~https://lagom247.com/~~  (AWS account free tier expiration)
 | Test CAS No. |
 |--------------|
 | 92-87-5      |
